@@ -1,0 +1,51 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.ankitg.meusample.MeUActivity" >
+
+    <Button
+        android:id="@+id/BTN_connect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:onClick="connect"
+        android:text="@string/connect_bluetooth"
+        android:textSize="32sp" />
+    
+    <ImageButton
+        android:id="@+id/BTN_main_image1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxHeight="16dp"
+        android:maxWidth="16dp"
+        android:tag="image1"
+        android:src="@drawable/ic_launcher"
+        android:layout_above="@+id/ET_main" 
+        android:contentDescription="@string/imagebutton_description_text"/>
+
+    <EditText
+        android:id="@+id/ET_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@+id/BTN_sendText"
+        android:hint="@string/editTextHint"
+        android:textSize="32sp" />
+
+    <Button
+        android:id="@+id/BTN_sendText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:onClick="sendText"
+        android:text="@string/send"
+        android:textSize="32sp" />
+
+</RelativeLayout>
