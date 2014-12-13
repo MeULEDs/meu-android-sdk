@@ -6,7 +6,9 @@
     <string name="action_settings">Settings</string>
     <string name="editTextHint">Enter text here &amp; tap -></string>
     <string name="send">Send</string>
-    <string name="connect_bluetooth">Connect Bluetooth.</string>
+    <string name="connect_bluetooth">Connect</string>
     <string name="imagebutton_description_text">Click here to send this image to the MeU.</string>
+    <string name="refresh_bluetooth">Refresh</string>
+    <string name="diconnect_bluetooth">Disconnect</string>
 
 </resources>

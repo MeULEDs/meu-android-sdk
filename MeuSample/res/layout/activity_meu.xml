@@ -8,44 +8,205 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.ankitg.meusample.MeUActivity" >
 
-    <Button
-        android:id="@+id/BTN_connect"
-        android:layout_width="wrap_content"
+    <Spinner
+        android:id="@+id/SPN_main_bluetooth_list"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:onClick="connect"
-        android:text="@string/connect_bluetooth"
-        android:textSize="32sp" />
+        android:layout_alignParentTop="true"
+        android:textSize="@dimen/activity_font_size" />
     
-    <ImageButton
-        android:id="@+id/BTN_main_image1"
+    <TextView
+        android:id="@+id/TV_main_bluetooth_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/SPN_main_bluetooth_list"
+        android:textSize="@dimen/activity_font_size" />
+    
+    <LinearLayout
+        android:id="@+id/LL_main_bt_options"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/TV_main_bluetooth_status"
+         >
+        
+	    <Button
+	        android:id="@+id/BTN_main_connect"
+	        android:layout_width="0dp"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	        android:text="@string/connect_bluetooth"
+	        android:textSize="@dimen/activity_font_size"
+	        style="?android:attr/buttonBarButtonStyle" />
+	    
+<!--  	    <Button
+	        android:id="@+id/BTN_main_disconnect"
+	        android:layout_width="0dp"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	        android:text="@string/diconnect_bluetooth"
+	        android:textSize="@dimen/activity_font_size"
+	        style="?android:attr/buttonBarButtonStyle" /> -->
+	    
+	    <Button
+	        android:id="@+id/BTN_main_refresh"
+	        android:layout_width="0dp"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	        android:text="@string/refresh_bluetooth"
+	        android:textSize="@dimen/activity_font_size"
+	        style="?android:attr/buttonBarButtonStyle" />
+        
+    </LinearLayout>
+    
+    <com.larswerkman.holocolorpicker.ColorPicker
+        android:id="@+id/Picker_main_colorpicker"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:maxHeight="16dp"
-        android:maxWidth="16dp"
-        android:tag="image1"
-        android:src="@drawable/ic_launcher"
-        android:layout_above="@+id/ET_main" 
-        android:contentDescription="@string/imagebutton_description_text"/>
+        android:layout_above="@+id/HSV_main_imagescrollview"
+        android:layout_below="@+id/LL_main_bt_options"
+        android:layout_centerHorizontal="true" />
+    
+    <HorizontalScrollView
+        android:id="@+id/HSV_main_imagescrollview"
+	    android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:fillViewport="true"
+	    android:measureAllChildren="false"
+    	android:scrollbars="none"
+  		android:layout_above="@+id/BTN_main_sendText" >
+	    
+        <LinearLayout
+        	android:layout_width="wrap_content"
+    		android:layout_height="wrap_content" >
+        
+	        <ImageButton
+		        android:id="@+id/BTN_main_image1"
+		        android:layout_width="48dp"
+		        android:layout_height="48dp"
+		        android:scaleType="fitXY"
+		        android:padding="1dp"
+		        android:src="@drawable/nascent"
+		        android:contentDescription="@string/imagebutton_description_text"/>
+	        
+	        <ImageButton
+		        android:id="@+id/BTN_main_image2"
+		        android:layout_width="48dp"
+		        android:layout_height="48dp"
+		        android:scaleType="fitXY"
+		        android:padding="1dp"
+		        android:src="@drawable/wwto"
+		        android:contentDescription="@string/imagebutton_description_text"/>
+	                
+	        <ImageButton
+		        android:id="@+id/BTN_main_image3"
+				android:layout_width="48dp"
+		        android:layout_height="48dp"
+		        android:scaleType="fitXY"
+		        android:padding="1dp"
+		        android:src="@drawable/heart"
+		        android:contentDescription="@string/imagebutton_description_text"/>
+
+	        <ImageButton
+		        android:id="@+id/BTN_main_image4"
+				android:layout_width="48dp"
+		        android:layout_height="48dp"
+		        android:scaleType="fitXY"
+		        android:padding="1dp"
+		        android:src="@drawable/star"
+		        android:contentDescription="@string/imagebutton_description_text"/>
+
+	        <ImageButton
+		        android:id="@+id/BTN_main_image5"
+		        android:layout_width="48dp"
+		        android:layout_height="48dp"
+		        android:scaleType="fitXY"
+		        android:padding="1dp"
+		        android:src="@drawable/skull"
+		        android:contentDescription="@string/imagebutton_description_text"/>
+
+	        <ImageButton
+		        android:id="@+id/BTN_main_image6"
+				android:layout_width="48dp"
+		        android:layout_height="48dp"
+		        android:scaleType="fitXY"
+		        android:padding="1dp"
+		        android:src="@drawable/megaman"
+		        android:contentDescription="@string/imagebutton_description_text"/>
+
+	        <ImageButton
+		        android:id="@+id/BTN_main_image7"
+		        android:layout_width="48dp"
+		        android:layout_height="48dp"
+		        android:scaleType="fitXY"
+		        android:padding="1dp"
+		        android:src="@drawable/hearts"
+		        android:contentDescription="@string/imagebutton_description_text"/>
+
+	        <ImageButton
+		        android:id="@+id/BTN_main_image8"
+		        android:layout_width="48dp"
+		        android:layout_height="48dp"
+		        android:scaleType="fitXY"
+		        android:padding="1dp"
+		        android:src="@drawable/mushroom_red"
+		        android:contentDescription="@string/imagebutton_description_text"/>
+
+	        <ImageButton
+		        android:id="@+id/BTN_main_image9"
+		        android:layout_width="48dp"
+		        android:layout_height="48dp"
+		        android:scaleType="fitXY"
+		        android:padding="1dp"
+		        android:src="@drawable/mushroom_green"
+		        android:contentDescription="@string/imagebutton_description_text"/>
+
+	        <ImageButton
+		        android:id="@+id/BTN_main_image10"
+		        android:layout_width="48dp"
+		        android:layout_height="48dp"
+		        android:scaleType="fitXY"
+		        android:padding="1dp"
+		        android:src="@drawable/goomba"
+		        android:contentDescription="@string/imagebutton_description_text"/>
+	        
+	        <ImageButton
+		        android:id="@+id/BTN_main_image11"
+		        android:layout_width="48dp"
+		        android:layout_height="48dp"
+		        android:scaleType="fitXY"
+		        android:padding="1dp"
+		        android:src="@drawable/fireflower"
+		        android:contentDescription="@string/imagebutton_description_text"/>
+	        
+	        <ImageButton
+		        android:id="@+id/BTN_main_image12"
+		        android:layout_width="48dp"
+		        android:layout_height="48dp"
+		        android:scaleType="fitXY"
+		        android:padding="1dp"
+		        android:src="@drawable/gremlin"
+		        android:contentDescription="@string/imagebutton_description_text"/>
+	    
+	    </LinearLayout>
+    </HorizontalScrollView>
 
     <EditText
-        android:id="@+id/ET_main"
+        android:id="@+id/ET_main_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
-        android:layout_toLeftOf="@+id/BTN_sendText"
+        android:layout_toLeftOf="@+id/BTN_main_sendText"
         android:hint="@string/editTextHint"
-        android:textSize="32sp" />
+        android:textSize="@dimen/activity_font_size" />
 
     <Button
-        android:id="@+id/BTN_sendText"
+        android:id="@+id/BTN_main_sendText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
-        android:onClick="sendText"
         android:text="@string/send"
-        android:textSize="32sp" />
+        android:textSize="@dimen/activity_font_size" />
 
 </RelativeLayout>
